@@ -31,7 +31,7 @@ CRITICAL=2;
 #UNKNOWN=3;
 
 
-LATEST_KERNEL=$(dpkg-query --search vmlinuz-* | sort -V | tail -1 | cut -d " " -f1 | sed 's/://g' | sed 's/linux-image-//g')
+LATEST_KERNEL=$(dpkg-query --search /boot/vmlinuz-* | sort -V | tail -1 | cut -d " " -f1 | sed 's/://g' | sed 's/linux-image-//g')
 
 RUNNING_KERNEL=$(uname -r)
 
